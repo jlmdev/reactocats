@@ -16,7 +16,7 @@ export class Article extends React.Component {
           <li>
             {this.props.octodexNumber}
             <a href={this.props.bigImageLink}>
-              <strong>{this.props.linkText}</strong>
+              <strong>{this.props.bigImageAlt}</strong>
             </a>
           </li>
           <li>
