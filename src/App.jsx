@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { PageHeader } from './lib/PageHeader'
-import { Article } from './lib/Article'
+import { Octocat } from './lib/Octocat'
 import Octocats from './lib/Octocats.json'
 
 class App extends Component {
   render() {
     const octocatsFromData = Octocats.map(octocat => (
-      <Article
+      <Octocat
         key={octocat.id}
         bigImageLink={octocat.bigImageLink}
         bigImage={octocat.bigImage}
