@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 import { PageHeader } from './lib/PageHeader'
 import { Article } from './lib/Article'
-
-// class Octocat extends React.Component {
-//   render() {
-
-//   }
-// }
+import Octocats from './lib/Octocats.json'
 
 class App extends Component {
   render() {
+    const octocatsFromData = Octocats.map(octocat => (
+      <Article
+        key={octocat.id}
+        bigImageLink={octocat.bigImageLink}
+        bigImage={octocat.bigImage}
+        bigImageAlt={octocat.bigImageAlt}
+        octodexNumber={octocat.octodexNumber}
+        authorOneLink={octocat.authorOneLink}
+        authorOneSrc={octocat.authorOneSrc}
+        authorOneAlt={octocat.authorOneAlt}
+      />
+    ))
+
     return (
       <div>
         <PageHeader />
@@ -17,7 +25,8 @@ class App extends Component {
         <body>
           <main>
             <section>
-              <Article
+              {octocatsFromData}
+              {/* <Article
                 bigImageLink="https://octodex.github.com//terracottocat/"
                 bigImage="https://octodex.github.com//images/Terracottocat_Single.png"
                 bigImageAlt="Terracottocat"
@@ -124,7 +133,7 @@ class App extends Component {
                 authorOneLink="https://github.com/heyhayhay"
                 authorOneSrc="https://github.com/heyhayhay.png"
                 authorOneAlt="heyhayhay"
-              />
+              /> */}
             </section>
           </main>
           <footer>
