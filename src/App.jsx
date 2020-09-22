@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { PageHeader } from './lib/PageHeader'
-import { Octocat } from './lib/Octocat'
-import Octocats from './lib/Octocats.json'
+import { PageHeader } from './components/PageHeader'
+import { Octocat } from './components/Octocat'
+import Octocats from './components/Octocats.json'
 
 class App extends Component {
   render() {
